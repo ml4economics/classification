@@ -25,6 +25,9 @@
 \usepackage{graphicx}
 \usepackage{multirow}
 \usepackage{natbib}
+\usepackage{pifont} % http://ctan.org/pkg/pifont
+\newcommand{\cmark}{\color{green} {\ding{51}} }
+\newcommand{\xmark}{\color{red}   {\ding{55}} }
 
 \DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}					
 						
@@ -174,14 +177,20 @@ Weka              & Java                 & Weka Explorer            \\ \hline
 \hline
 \textbf{Methode}  		& \textbf{Weka} 	& \textbf{KNIME}             \\ \hline
 \multicolumn{3}{|c|}{Statistische Verfahren} \\ \hline
-Linear Regression 		& \checkmark        &                  \\ \hline
-Logistic Regression		& \checkmark        &                    \\ \hline
-Diskriminantenanalyse	& ?              	&  \\ \hline
-\multicolumn{3}{|c|}{Ensemble Verfahren} \\ \hline
-Bagging 				& \checkmark        &                  \\ \hline
-Random Forest			& \checkmark        &                    \\ \hline
-Boosting				& \checkmark        &  \\ \hline
-Stacking				& \checkmark        &  \\ \hline
+Linear Regression 		& \xmark        & \xmark			\\ \hline
+Logistic Regression		& \cmark        & \cmark			\\ \hline
+Diskriminantenanalyse	& \xmark       	& \xmark			\\ \hline
+\multicolumn{3}{|c|}{Tree basierende Verfahren}				\\ \hline
+Decision Tree 			& \cmark        &					\\ \hline
+Random Tree				& \cmark        &                   \\ \hline
+Random Forest			& \cmark        &					\\ \hline
+\multicolumn{3}{|c|}{Ensemble Verfahren} 					\\ \hline
+Bagging 				& \cmark        &					\\ \hline
+Boosting				& \cmark        &					\\ \hline
+Stacking				& \cmark        &					\\ \hline
+\multicolumn{3}{|c|}{Weitere Verfahren} 					\\ \hline
+Support Vector Machines	& \cmark        &					\\ \hline
+Neuronale Netze			& \cmark        &					\\ \hline
 \end{tabular}
 \caption{Implementierung von Klassifikationsmethoden}
 \label{table:implementations}

@@ -135,7 +135,7 @@
                 <path d="M181 177 L208 177 L208 188 L181 188 L181 177 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath41">
-                <path d="M-1 -1 L1155 -1 L1155 455 L-1 455 L-1 -1 Z"/>
+                <path d="M-1 -1 L882 -1 L882 436 L-1 436 L-1 -1 Z"/>
             </clipPath>
         </defs>
         <g stroke-miterlimit="0" stroke-width="0"
@@ -874,48 +874,34 @@ YII=" xlink:actuate="onLoad"/>
                      points=" 189 159 198 163 189 168" stroke="none"/>
             <polygon fill="rgb(30,185,220)" clip-path="url(#clipPath40)"
                      points=" 189 178 198 178 198 187 189 187" stroke="none"/>
-            <line clip-path="url(#clipPath41)" fill="none" x1="318" x2="326"
-                  y1="163" y2="163" stroke="rgb(150,150,150)"/>
-            <line clip-path="url(#clipPath41)" fill="none" x1="326" x2="379"
-                  y1="163" y2="53" stroke="rgb(150,150,150)"/>
-            <line clip-path="url(#clipPath41)" fill="none" x1="379" x2="387"
-                  y1="53" y2="53" stroke="rgb(150,150,150)"/>
-            <line clip-path="url(#clipPath41)" fill="none" x1="558" x2="566"
-                  y1="173" y2="173" stroke="rgb(150,150,150)"/>
-            <line clip-path="url(#clipPath41)" fill="none" x1="566" x2="659"
-                  y1="173" y2="303" stroke="rgb(150,150,150)"/>
-            <line clip-path="url(#clipPath41)" fill="none" x1="659" x2="667"
-                  y1="303" y2="303" stroke="rgb(150,150,150)"/>
-            <line clip-path="url(#clipPath41)" fill="none" x1="438" x2="446"
-                  y1="43" y2="43" stroke="rgb(150,150,150)"/>
-            <line clip-path="url(#clipPath41)" fill="none" x1="446" x2="499"
-                  y1="43" y2="163" stroke="rgb(150,150,150)"/>
-            <line clip-path="url(#clipPath41)" fill="none" x1="499" x2="507"
-                  y1="163" y2="163" stroke="rgb(150,150,150)"/>
-            <line clip-path="url(#clipPath41)" fill="none" x1="318" x2="326"
-                  y1="182" y2="182" stroke="rgb(150,150,150)"/>
-            <line clip-path="url(#clipPath41)" fill="none" x1="326" x2="499"
-                  y1="182" y2="182" stroke="rgb(150,150,150)"/>
-            <line clip-path="url(#clipPath41)" fill="none" x1="499" x2="507"
-                  y1="182" y2="182" stroke="rgb(150,150,150)"/>
-            <line clip-path="url(#clipPath41)" fill="none" x1="198" x2="206"
-                  y1="163" y2="163" stroke="rgb(150,150,150)"/>
-            <line clip-path="url(#clipPath41)" fill="none" x1="206" x2="259"
-                  y1="163" y2="173" stroke="rgb(150,150,150)"/>
-            <line clip-path="url(#clipPath41)" fill="none" x1="259" x2="267"
-                  y1="173" y2="173" stroke="rgb(150,150,150)"/>
-            <line clip-path="url(#clipPath41)" fill="none" x1="78" x2="86"
-                  y1="173" y2="173" stroke="rgb(150,150,150)"/>
-            <line clip-path="url(#clipPath41)" fill="none" x1="86" x2="139"
-                  y1="173" y2="173" stroke="rgb(150,150,150)"/>
-            <line clip-path="url(#clipPath41)" fill="none" x1="139" x2="147"
-                  y1="173" y2="173" stroke="rgb(150,150,150)"/>
-            <line clip-path="url(#clipPath41)" fill="none" x1="558" x2="566"
-                  y1="173" y2="173" stroke="rgb(150,150,150)"/>
-            <line clip-path="url(#clipPath41)" fill="none" x1="566" x2="659"
-                  y1="173" y2="173" stroke="rgb(150,150,150)"/>
-            <line clip-path="url(#clipPath41)" fill="none" x1="659" x2="667"
-                  y1="173" y2="173" stroke="rgb(150,150,150)"/>
+            <path fill="none"
+                  d="M558 173 C560 173 564 173 566 173 C593 173 632 173 659 173 C661 173 665 173 667 173"
+                  clip-path="url(#clipPath41)" fill-rule="evenodd"
+                  stroke="rgb(150,150,150)"/>
+            <path fill="none"
+                  d="M78 173 C80 173 84 173 86 173 C101 173 124 173 139 173 C141 173 145 173 147 173"
+                  clip-path="url(#clipPath41)" fill-rule="evenodd"
+                  stroke="rgb(150,150,150)"/>
+            <path fill="none"
+                  d="M318 182 C320 182 324 182 326 182 C377 182 448 182 499 182 C501 182 505 182 507 182"
+                  clip-path="url(#clipPath41)" fill-rule="evenodd"
+                  stroke="rgb(150,150,150)"/>
+            <path fill="none"
+                  d="M438 43 C440 43 444 43 446 43 C485 43 460 163 499 163 C501 163 505 163 507 163"
+                  clip-path="url(#clipPath41)" fill-rule="evenodd"
+                  stroke="rgb(150,150,150)"/>
+            <path fill="none"
+                  d="M318 163 C320 163 324 163 326 163 C362 163 343 53 379 53 C381 53 385 53 387 53"
+                  clip-path="url(#clipPath41)" fill-rule="evenodd"
+                  stroke="rgb(150,150,150)"/>
+            <path fill="none"
+                  d="M558 173 C560 173 564 173 566 173 C613 173 612 303 659 303 C661 303 665 303 667 303"
+                  clip-path="url(#clipPath41)" fill-rule="evenodd"
+                  stroke="rgb(150,150,150)"/>
+            <path fill="none"
+                  d="M198 163 C200 163 204 163 206 163 C222 163 243 173 259 173 C261 173 265 173 267 173"
+                  clip-path="url(#clipPath41)" fill-rule="evenodd"
+                  stroke="rgb(150,150,150)"/>
         </g>
     </g>
 </svg>
