@@ -15,6 +15,10 @@ Anaconda comes with the [Conda Package Manager](https://docs.conda.io/en/latest/
 It is recommended to set up a separate environment for each kernel (see [Managing Conda Environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#)):
 ```
 conda create --name my_env python=3.7
+conda install jupyter
+```
+You can then switch between environments by
+```
 conda activate my_env
 conda deactivate
 ```
