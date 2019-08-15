@@ -8,8 +8,14 @@ This project is using version 5.1.0
 
 ## Octave in Jupyter Notebooks
 
+Create environment and install kernel
 ```
 conda create --name octave python=3.7
 conda activate octave
 conda deactivate
+```
+Run Jupyter notebook
+```
+conda activate octave
+jupyter notebook
 ```
