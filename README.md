@@ -5,7 +5,7 @@ Here are the tools being used
 * [Weka (Waikato Environment for Knowledge Analysis)](https://www.cs.waikato.ac.nz/ml/index.html)
 * [R](https://cran.r-project.org/)
 * [Python with scikit-learn](https://scikit-learn.org)
-* [GNU Octave](../Octave)
+* [GNU Octave](../../Octave)
 
 ## Jupyter Notebooks
 Most examples are available as [Jupyter Notebooks](https://jupyter.org/). The easiest and recommended way to install Jupyter is using an [Anaconda Distribution](https://www.anaconda.com/distribution/), preferably the Python 3.7 version.
