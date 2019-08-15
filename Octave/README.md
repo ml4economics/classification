@@ -18,7 +18,7 @@ conda install -c conda-forge octave_kernel
 ```
 Make sure the Octave CLI is on your path
 ```
-PATH=%PATH%;C:\Octave\Octave-5.1.0.0\mingw64\bin
+set PATH=%PATH%;C:\Octave\Octave-5.1.0.0\mingw64\bin
 ```
 
 Run Jupyter notebook
