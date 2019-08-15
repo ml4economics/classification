@@ -1,7 +1,7 @@
 # Implementations of Classification Algorithms
 
 Here are the tools being used
-* [KNIME](https://www.knime.com/)
+* [KNIME](KNIME)
 * [Weka (Waikato Environment for Knowledge Analysis)](https://www.cs.waikato.ac.nz/ml/index.html)
 * [R](https://cran.r-project.org/)
 * [Python with scikit-learn](https://scikit-learn.org)
