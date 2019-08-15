@@ -8,4 +8,4 @@ Here are the tools being used
 * [GNU Octave](Octave)
 
 ## Jupyter Notebooks
-Most examples are available as [Jupyter Notebooks](https://jupyter.org/). Check out [Details](Jupyter Notebooks.md).
+Most examples are available as [Jupyter Notebooks](https://jupyter.org/). Check out [Details](../blob/master/Jupyter Notebooks.md).
