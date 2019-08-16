@@ -2,9 +2,7 @@
 
 Create environment
 ```
-conda create --name sklearn python=3.7
-conda activate sklearn
-conda install jupyter
+conda env create -f environment.yml
 ```
 Run Jupyter notebook
 ```
