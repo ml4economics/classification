@@ -1,5 +1,6 @@
 ## Jupyter Notebooks
 
+Create environment
 ```
 conda create --name sklearn python=3.7
 conda activate sklearn
