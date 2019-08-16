@@ -8,7 +8,7 @@ Here are the tools being used
 * [GNU Octave](Octave)
 
 ## Jupyter Notebooks
-Example implementations for several algorithms are available as [Jupyter Notebooks](https://jupyter.org/) on [Binder](mybinder.org)
+Example implementations for several algorithms are available as [Jupyter Notebooks](https://jupyter.org/) on [Binder](mybinder.org).
 To run the notebooks locally check out the instructions for [running Jupyter notebooks locally](JupyterNotebooks.md).
 
 ## Example Notebooks
