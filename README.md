@@ -3,9 +3,9 @@
 Here are the tools being used
 * [KNIME](KNIME)
 * [Weka (Waikato Environment for Knowledge Analysis)](https://www.cs.waikato.ac.nz/ml/index.html)
-* [R](https://cran.r-project.org/)
-* [Python with scikit-learn](https://scikit-learn.org)
-* [GNU Octave](Octave)
+* [R](https://github.com/ml4economics/notebooks-r)
+* [Python with scikit-learn](https://github.com/ml4economics/notebooks-python)
+* [GNU Octave](https://github.com/ml4economics/notebooks-octave)
 
 ## Jupyter Notebooks
 Example implementations for several algorithms are available as [Jupyter Notebooks](https://jupyter.org/) on [Binder](mybinder.org).
