@@ -6,7 +6,7 @@
 <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
 </config>
 <config key="model">
-<entry key="url" type="xstring" value="C:\Data\Thesis\classification\data\bank\bank-additional.csv"/>
+<entry key="url" type="xstring" value="knime://knime.workflow/data/bank-additional.csv"/>
 <entry key="colDelimiter" type="xstring" value=";"/>
 <entry key="rowDelimiter" type="xstring" value="%%00010"/>
 <entry key="quote" type="xstring" value="&quot;"/>
@@ -60,6 +60,6 @@
 </config>
 <config key="filestores">
 <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-<entry key="file_store_id" type="xstring" value="881ae460-288e-4254-9f63-ac014ed21172"/>
+<entry key="file_store_id" type="xstring" value="264dae5d-9b29-4e15-afee-fd66a8e8b40d"/>
 </config>
 </config>
