@@ -15,7 +15,7 @@
     <g>
         <defs id="defs1">
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath1">
-                <path d="M-1 193 L107 193 L107 210 L-1 210 L-1 193 Z"/>
+                <path d="M18 193 L98 193 L98 210 L18 210 L18 193 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath2">
                 <path d="M139 193 L247 193 L247 225 L139 225 L139 193 Z"/>
@@ -123,13 +123,13 @@
                 <path d="M602 297 L628 297 L628 308 L602 308 L602 297 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath37">
-                <path d="M-1 -1 L769 -1 L769 467 L-1 467 L-1 -1 Z"/>
+                <path d="M-1 -1 L728 -1 L728 467 L-1 467 L-1 -1 Z"/>
             </clipPath>
         </defs>
         <g stroke-miterlimit="0" stroke-width="0"
            font-family="&apos;Arial&apos;" stroke-linejoin="round">
-            <text xml:space="preserve" x="0" y="205" clip-path="url(#clipPath1)"
-                  stroke="none">bank-additional.csv</text><text xml:space="preserve"
+            <text xml:space="preserve" x="19" y="205"
+                  clip-path="url(#clipPath1)" stroke="none">bank-full.csv</text><text xml:space="preserve"
                   x="140" y="205" clip-path="url(#clipPath2)" stroke="none">80% for training set</text><text xml:space="preserve"
                   x="142" y="220" clip-path="url(#clipPath2)" stroke="none">20% for testing set</text><text xml:space="preserve"
                   x="530" y="205" clip-path="url(#clipPath3)" stroke="none">Calculate accuracy and</text><text xml:space="preserve"
@@ -494,8 +494,8 @@ JBezcnIZ4jMEm2Fs3DyWIBrML9XU2gQ03ZgYQ7AaBgyKf3//WDHnyEj7//n16+6X
 t++iSSnYYIYBDbH+++fPXwCTQTrJ2eP7AQAAAABJRU5ErkJggg==" xlink:actuate="onLoad"/>
             <polygon clip-path="url(#clipPath36)"
                      points=" 609 298 618 302 609 307" stroke="none"/>
-            <text xml:space="preserve" x="0" y="205" clip-path="url(#clipPath1)"
-                  stroke="none">bank-additional.csv</text><text xml:space="preserve"
+            <text xml:space="preserve" x="19" y="205"
+                  clip-path="url(#clipPath1)" stroke="none">bank-full.csv</text><text xml:space="preserve"
                   x="140" y="205" clip-path="url(#clipPath2)" stroke="none">80% for training set</text><text xml:space="preserve"
                   x="142" y="220" clip-path="url(#clipPath2)" stroke="none">20% for testing set</text><text xml:space="preserve"
                   x="530" y="205" clip-path="url(#clipPath3)" stroke="none">Calculate accuracy and</text><text xml:space="preserve"
@@ -829,6 +829,22 @@ t++iSSnYYIYBDbH+++fPXwCTQTrJ2eP7AQAAAABJRU5ErkJggg==" xlink:actuate="onLoad"/>
             <polygon clip-path="url(#clipPath36)"
                      points=" 609 298 618 302 609 307" stroke="none"/>
             <path fill="none"
+                  d="M78 153 C80 153 84 153 86 153 C107 153 138 153 159 153 C161 153 165 153 167 153"
+                  clip-path="url(#clipPath37)" fill-rule="evenodd"
+                  stroke="rgb(150,150,150)"/>
+            <path fill="none"
+                  d="M338 53 C340 53 344 53 346 53 C380 53 385 143 419 143 C421 143 425 143 427 143"
+                  clip-path="url(#clipPath37)" fill-rule="evenodd"
+                  stroke="rgb(150,150,150)"/>
+            <path fill="none"
+                  d="M338 53 C340 53 344 53 346 53 C409 53 496 43 559 43 C561 43 565 43 567 43"
+                  clip-path="url(#clipPath37)" fill-rule="evenodd"
+                  stroke="rgb(150,150,150)"/>
+            <path fill="none"
+                  d="M478 153 C480 153 484 153 486 153 C507 153 538 153 559 153 C561 153 565 153 567 153"
+                  clip-path="url(#clipPath37)" fill-rule="evenodd"
+                  stroke="rgb(150,150,150)"/>
+            <path fill="none"
                   d="M218 143 C220 143 224 143 226 143 C257 143 248 53 279 53 C281 53 285 53 287 53"
                   clip-path="url(#clipPath37)" fill-rule="evenodd"
                   stroke="rgb(150,150,150)"/>
@@ -837,23 +853,7 @@ t++iSSnYYIYBDbH+++fPXwCTQTrJ2eP7AQAAAABJRU5ErkJggg==" xlink:actuate="onLoad"/>
                   clip-path="url(#clipPath37)" fill-rule="evenodd"
                   stroke="rgb(150,150,150)"/>
             <path fill="none"
-                  d="M338 53 C340 53 344 53 346 53 C409 53 496 43 559 43 C561 43 565 43 567 43"
-                  clip-path="url(#clipPath37)" fill-rule="evenodd"
-                  stroke="rgb(150,150,150)"/>
-            <path fill="none"
                   d="M478 153 C480 153 484 153 486 153 C530 153 515 283 559 283 C561 283 565 283 567 283"
-                  clip-path="url(#clipPath37)" fill-rule="evenodd"
-                  stroke="rgb(150,150,150)"/>
-            <path fill="none"
-                  d="M478 153 C480 153 484 153 486 153 C507 153 538 153 559 153 C561 153 565 153 567 153"
-                  clip-path="url(#clipPath37)" fill-rule="evenodd"
-                  stroke="rgb(150,150,150)"/>
-            <path fill="none"
-                  d="M338 53 C340 53 344 53 346 53 C380 53 385 143 419 143 C421 143 425 143 427 143"
-                  clip-path="url(#clipPath37)" fill-rule="evenodd"
-                  stroke="rgb(150,150,150)"/>
-            <path fill="none"
-                  d="M78 153 C80 153 84 153 86 153 C107 153 138 153 159 153 C161 153 165 153 167 153"
                   clip-path="url(#clipPath37)" fill-rule="evenodd"
                   stroke="rgb(150,150,150)"/>
         </g>
