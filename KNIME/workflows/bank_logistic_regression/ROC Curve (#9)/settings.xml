@@ -102,7 +102,7 @@
 <entry key="node-feature-name" type="xstring" value="KNIME JavaScript Views"/>
 <entry key="node-feature-symbolic-name" type="xstring" value="org.knime.features.js.views.feature.group"/>
 <entry key="node-feature-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
-<entry key="node-feature-version" type="xstring" value="4.0.0.v201906241501"/>
+<entry key="node-feature-version" type="xstring" value="4.0.1.v201908131226"/>
 <config key="factory_settings"/>
 <entry key="name" type="xstring" value="ROC Curve"/>
 <entry key="hasContent" type="xboolean" value="true"/>
@@ -127,6 +127,6 @@
 </config>
 <config key="filestores">
 <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-<entry key="file_store_id" type="xstring" value="599a892e-4403-40c8-9719-1e187492d876"/>
+<entry key="file_store_id" type="xstring" value="374a5290-bd6c-4f60-ab55-6bec4331fa22"/>
 </config>
 </config>

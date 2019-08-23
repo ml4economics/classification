@@ -77,18 +77,18 @@
 <entry key="state" type="xstring" value="EXECUTED"/>
 <config key="nodecontainer_message">
 <entry key="type" type="xstring" value="WARNING"/>
-<entry key="message" type="xstring" value="The algorithm did not reach convergence after the specified number of epochs. Setting the epoch limit higher might result in a better model."/>
+<entry key="message" type="xstring" value="The algorithm did not reach convergence after the specified number of epochs. Setting the epoch limit higher might result in a better model.%%00010The covariance matrix could not be calculated because the observed fisher information matrix was singular. Did you properly normalize the numerical features?"/>
 </config>
 <entry key="factory" type="xstring" value="org.knime.base.node.mine.regression.logistic.learner4.LogRegLearnerNodeFactory4"/>
 <entry key="node-name" type="xstring" value="Logistic Regression Learner"/>
 <entry key="node-bundle-name" type="xstring" value="KNIME Base Nodes"/>
 <entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.base"/>
 <entry key="node-bundle-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
-<entry key="node-bundle-version" type="xstring" value="4.0.0.v201906241150"/>
+<entry key="node-bundle-version" type="xstring" value="4.0.1.v201908131444"/>
 <entry key="node-feature-name" type="xstring" value="KNIME Core"/>
 <entry key="node-feature-symbolic-name" type="xstring" value="org.knime.features.base.feature.group"/>
 <entry key="node-feature-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
-<entry key="node-feature-version" type="xstring" value="4.0.0.v201906261003"/>
+<entry key="node-feature-version" type="xstring" value="4.0.1.v201908131444"/>
 <config key="factory_settings"/>
 <entry key="name" type="xstring" value="Logistic Regression Learner"/>
 <entry key="hasContent" type="xboolean" value="true"/>
@@ -120,6 +120,6 @@
 </config>
 <config key="filestores">
 <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-<entry key="file_store_id" type="xstring" value="88aeb4c6-4b81-4efd-b385-5ddba2f30abb"/>
+<entry key="file_store_id" type="xstring" value="6e222db3-c25c-4ce9-8b97-29a2d8503be1"/>
 </config>
 </config>
