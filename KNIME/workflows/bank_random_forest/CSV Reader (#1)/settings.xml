@@ -7,7 +7,7 @@
 </config>
 <config key="model">
 <entry key="url" type="xstring" value="knime://knime.workflow/data/bank-full.csv"/>
-<entry key="colDelimiter" type="xstring" value=";"/>
+<entry key="colDelimiter" type="xstring" value=","/>
 <entry key="rowDelimiter" type="xstring" value="%%00010"/>
 <entry key="quote" type="xstring" value="&quot;"/>
 <entry key="commentStart" type="xstring" value="#"/>
@@ -60,6 +60,6 @@
 </config>
 <config key="filestores">
 <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-<entry key="file_store_id" type="xstring" value="868b5363-7ccd-4f2b-b413-eaab6505c0af"/>
+<entry key="file_store_id" type="xstring" value="df6d52ff-5b2f-44bb-b009-26f43f14092a"/>
 </config>
 </config>
