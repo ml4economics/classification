@@ -25,7 +25,7 @@ jupyter notebook
 ### Setting PATH variables in Conda environments
 See [Conda Documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#windows). 
 
-In envs\myenv\etc\conda\activate.d\env_vars.bat
+In envs\classification\etc\conda\activate.d\env_vars.bat
 ```
 set OLD_PATH=%PATH%
 set PATH=%PATH%;C:\Octave\Octave-5.1.0.0\mingw64\bin
