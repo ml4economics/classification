@@ -14,6 +14,6 @@ To run the notebooks locally check out the instructions for [running Jupyter not
 ## Example Notebooks
 
 ### Python (Scikit-Learn)
-* Logistic Regression : [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ml4economics/classification/master?filepath=Python%2FLogisticRegression.sklearn.ipynb)
+* Logistic Regression : [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ml4economics/classification/master?filepath=LogisticRegression.sklearn.ipynb)
 * Logistic Regression 2 : [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ml4economics/classification/master?filepath=scikit-learn%2FLogisticRegression.sklearn.ipynb)
 
