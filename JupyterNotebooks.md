@@ -23,11 +23,17 @@ jupyter notebook
 * Install the [R kernel for Jupyter](https://github.com/IRkernel/IRkernel)
   * open an Anaconda Prompt
   * `conda activate classification`
-  * open an R prompt (not Rgui or RStudio), e.g. `C:\Program Files\R\R-3.6.1\bin\R.exe`
+  * open an R prompt (__not Rgui or RStudio__), e.g. `C:\Program Files\R\R-3.6.1\bin\R.exe`
 ```
 install.packages('IRkernel')
 IRkernel::installspec()  # to register the kernel in the current R installation
 ```
+## Jupyter Notebooks for Octave
+For details on the Octave kernel see also [Calysto Octave Kernel](https://github.com/Calysto/octave_kernel#installation)
+
+* Install GNU Octave from https://www.gnu.org/software/octave/
+* Make sure that the environment variable `OCTAVE_EXECUTABLE` points to the `octave-cli` executable. This can be done locally in the Conda environment in `etc/conda/activate.d/env_vars.bat`
+
 
 ## Tips and Tricks
 
