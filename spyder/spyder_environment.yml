@@ -1,0 +1,16 @@
+name: spyder
+channels:
+  - conda-forge
+dependencies:
+  - python=3.7
+  - jupyterlab    # notebooks
+  - numpy         # scientific computing
+  - pandas        # data structures
+  - scikit-learn  # machine learning libs
+  - matplotlib    # plotting
+  - seaborn       # visualization based on matplotlib
+  - tensorflow
+  - keras
+  - spyder
+  - mlxtend
+
