@@ -14,6 +14,20 @@ conda env create -f environment.yml
 conda activate classification
 jupyter notebook
 ```
+## Jupyter Notebooks for R
+
+* Install R from https://cran.rstudio.com/
+* Install Rtools from https://cran.r-project.org/bin/windows/Rtools/ (optional) 
+* Install RStudio from https://www.rstudio.com/ (optional)
+* Install [Anaconda](https://www.anaconda.com/distribution/)
+* Install the [R kernel for Jupyter](https://github.com/IRkernel/IRkernel)
+  * open an Anaconda Prompt
+  * `conda activate classification`
+  * open an R prompt (not Rgui or RStudio), e.g. `C:\Program Files\R\R-3.6.1\bin\R.exe`
+```
+install.packages('IRkernel')
+IRkernel::installspec()  # to register the kernel in the current R installation
+```
 
 ## Tips and Tricks
 
