@@ -9,11 +9,6 @@ It is recommended to set up a separate environment for each kernel (see [Managin
 ```
 conda env create -f environment.yml
 ```
-### Configure Environment (Optional) 
-E.g. to start in the current directory
-1. copy the folder `config/etc` to the Anaconda environment, i.e. `<Anaconda home>\envs\classification`
-2. update the path in etc/conda/activate.d/profile.bat
-
 ### Run Jupyter Notebook
 ```
 conda activate classification
@@ -21,6 +16,11 @@ jupyter notebook
 ```
 
 ## Tips and Tricks
+
+### Configure Environment (Optional) 
+E.g. to start in the current directory
+1. copy the folder `conda/etc` to the Anaconda environment, i.e. `<Anaconda home>\envs\classification`
+2. update the path in etc/conda/activate.d/profile.bat
 
 ### Setting PATH variables in Conda environments
 See [Conda Documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#windows). 
