@@ -19,7 +19,6 @@ jupyter notebook
 * Install R from https://cran.rstudio.com/
 * Install Rtools from https://cran.r-project.org/bin/windows/Rtools/ (optional) 
 * Install RStudio from https://www.rstudio.com/ (optional)
-* Install [Anaconda](https://www.anaconda.com/distribution/)
 * Install the [R kernel for Jupyter](https://github.com/IRkernel/IRkernel)
   * open an Anaconda Prompt
   * `conda activate classification`
