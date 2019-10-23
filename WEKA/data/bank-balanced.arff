@@ -1,4 +1,4 @@
-@relation balanced_bank-weka.filters.unsupervised.attribute.Remove-R1
+@relation balanced_bank-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.SwapValues-Clast-Ffirst-Slast
 
 @attribute age numeric
 @attribute job {admin.,technician,management,blue-collar,retired,services,student,unknown,housemaid,unemployed,entrepreneur,self-employed}
@@ -20,7 +20,7 @@
 @attribute cons.conf.idx numeric
 @attribute euribor3m numeric
 @attribute nr.employed numeric
-@attribute y {no,yes}
+@attribute y {yes,no}
 
 @data
 35,admin.,single,university.degree,no,yes,no,cellular,may,thu,143,1,999,1,failure,-1.8,92.893,-46.2,1.266,5099.1,no

@@ -1,4 +1,4 @@
-@relation bank-10percent
+@relation bank-10percent-weka.filters.unsupervised.attribute.SwapValues-Clast-Ffirst-Slast
 
 @attribute age numeric
 @attribute job {blue-collar,services,admin.,entrepreneur,self-employed,technician,management,student,retired,housemaid,unemployed,unknown}
@@ -20,7 +20,7 @@
 @attribute cons.conf.idx numeric
 @attribute euribor3m numeric
 @attribute nr.employed numeric
-@attribute y {no,yes}
+@attribute y {yes,no}
 
 @data
 30,blue-collar,married,basic.9y,no,yes,no,cellular,may,fri,487,2,999,0,nonexistent,-1.8,92.893,-46.2,1.313,5099.1,no
