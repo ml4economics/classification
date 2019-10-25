@@ -7,7 +7,7 @@
 </config>
 <config key="model">
 <entry key="hideInWizard" type="xboolean" value="false"/>
-<entry key="generateImage" type="xboolean" value="true"/>
+<entry key="generateImage" type="xboolean" value="false"/>
 <entry key="showArea" type="xboolean" value="true"/>
 <entry key="showGrid" type="xboolean" value="true"/>
 <entry key="resizeToWindow" type="xboolean" value="true"/>
@@ -45,7 +45,7 @@
 <entry key="0" type="xstring" value="P (y=yes)"/>
 </config>
 <config key="excluded_names">
-<entry key="array-size" type="xint" value="12"/>
+<entry key="array-size" type="xint" value="62"/>
 <entry key="0" type="xstring" value="age"/>
 <entry key="1" type="xstring" value="duration"/>
 <entry key="2" type="xstring" value="campaign"/>
@@ -56,8 +56,58 @@
 <entry key="7" type="xstring" value="cons.conf.idx"/>
 <entry key="8" type="xstring" value="euribor3m"/>
 <entry key="9" type="xstring" value="nr.employed"/>
-<entry key="10" type="xstring" value="P (y=no)"/>
-<entry key="11" type="xstring" value="Prediction (y) (Confidence)"/>
+<entry key="10" type="xstring" value="services_job"/>
+<entry key="11" type="xstring" value="admin._job"/>
+<entry key="12" type="xstring" value="blue-collar_job"/>
+<entry key="13" type="xstring" value="retired_job"/>
+<entry key="14" type="xstring" value="unemployed_job"/>
+<entry key="15" type="xstring" value="technician_job"/>
+<entry key="16" type="xstring" value="student_job"/>
+<entry key="17" type="xstring" value="entrepreneur_job"/>
+<entry key="18" type="xstring" value="self-employed_job"/>
+<entry key="19" type="xstring" value="housemaid_job"/>
+<entry key="20" type="xstring" value="management_job"/>
+<entry key="21" type="xstring" value="unknown_job"/>
+<entry key="22" type="xstring" value="single_marital"/>
+<entry key="23" type="xstring" value="married_marital"/>
+<entry key="24" type="xstring" value="divorced_marital"/>
+<entry key="25" type="xstring" value="unknown_marital"/>
+<entry key="26" type="xstring" value="high.school_education"/>
+<entry key="27" type="xstring" value="basic.6y_education"/>
+<entry key="28" type="xstring" value="university.degree_education"/>
+<entry key="29" type="xstring" value="basic.9y_education"/>
+<entry key="30" type="xstring" value="professional.course_education"/>
+<entry key="31" type="xstring" value="unknown_education"/>
+<entry key="32" type="xstring" value="basic.4y_education"/>
+<entry key="33" type="xstring" value="no_default"/>
+<entry key="34" type="xstring" value="unknown_default"/>
+<entry key="35" type="xstring" value="no_housing"/>
+<entry key="36" type="xstring" value="yes_housing"/>
+<entry key="37" type="xstring" value="unknown_housing"/>
+<entry key="38" type="xstring" value="no_loan"/>
+<entry key="39" type="xstring" value="yes_loan"/>
+<entry key="40" type="xstring" value="unknown_loan"/>
+<entry key="41" type="xstring" value="cellular_contact"/>
+<entry key="42" type="xstring" value="telephone_contact"/>
+<entry key="43" type="xstring" value="sep_month"/>
+<entry key="44" type="xstring" value="may_month"/>
+<entry key="45" type="xstring" value="apr_month"/>
+<entry key="46" type="xstring" value="aug_month"/>
+<entry key="47" type="xstring" value="oct_month"/>
+<entry key="48" type="xstring" value="mar_month"/>
+<entry key="49" type="xstring" value="nov_month"/>
+<entry key="50" type="xstring" value="jun_month"/>
+<entry key="51" type="xstring" value="jul_month"/>
+<entry key="52" type="xstring" value="dec_month"/>
+<entry key="53" type="xstring" value="fri_day_of_week"/>
+<entry key="54" type="xstring" value="thu_day_of_week"/>
+<entry key="55" type="xstring" value="tue_day_of_week"/>
+<entry key="56" type="xstring" value="wed_day_of_week"/>
+<entry key="57" type="xstring" value="mon_day_of_week"/>
+<entry key="58" type="xstring" value="nonexistent_poutcome"/>
+<entry key="59" type="xstring" value="success_poutcome"/>
+<entry key="60" type="xstring" value="failure_poutcome"/>
+<entry key="61" type="xstring" value="P (y=no)"/>
 </config>
 <entry key="enforce_option" type="xstring" value="EnforceExclusion"/>
 <config key="name_pattern">
@@ -68,8 +118,8 @@
 <config key="datatype">
 <config key="typelist">
 <entry key="org.knime.core.data.IntValue" type="xboolean" value="false"/>
-<entry key="org.knime.core.data.StringValue" type="xboolean" value="false"/>
 <entry key="org.knime.core.data.DoubleValue" type="xboolean" value="false"/>
+<entry key="org.knime.core.data.StringValue" type="xboolean" value="false"/>
 <entry key="org.knime.core.data.BooleanValue" type="xboolean" value="false"/>
 <entry key="org.knime.core.data.LongValue" type="xboolean" value="false"/>
 <entry key="org.knime.core.data.date.DateAndTimeValue" type="xboolean" value="false"/>
@@ -81,8 +131,8 @@
 <config key="nodeAnnotation">
 <entry key="text" type="xstring" value=""/>
 <entry key="bgcolor" type="xint" value="16777215"/>
-<entry key="x-coordinate" type="xint" value="607"/>
-<entry key="y-coordinate" type="xint" value="419"/>
+<entry key="x-coordinate" type="xint" value="627"/>
+<entry key="y-coordinate" type="xint" value="399"/>
 <entry key="width" type="xint" value="106"/>
 <entry key="height" type="xint" value="15"/>
 <entry key="alignment" type="xstring" value="CENTER"/>
@@ -93,7 +143,7 @@
 <config key="styles"/>
 </config>
 <entry key="customDescription" type="xstring" isnull="true" value=""/>
-<entry key="state" type="xstring" value="CONFIGURED"/>
+<entry key="state" type="xstring" value="IDLE"/>
 <entry key="factory" type="xstring" value="org.knime.js.base.node.viz.plotter.roc.ROCCurveNodeFactory"/>
 <entry key="node-name" type="xstring" value="ROC Curve"/>
 <entry key="node-bundle-name" type="xstring" value="KNIME JavaScript Base Views"/>
