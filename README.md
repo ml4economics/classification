@@ -5,8 +5,9 @@ The repository demonstrates the application of different Machine Learning tools 
 The tools that were applied to the data are
 * [Weka](WEKA)
 * [KNIME](KNIME)
-* [R](https://github.com/ml4economics/notebooks-r)
-* [Python with scikit-learn](https://github.com/ml4economics/notebooks-python)
+* [R](R)
+* [Python with scikit-learn](python)
+* [TensorFlow](tensorflow)
 * [GNU Octave](https://github.com/ml4economics/notebooks-octave)
 
 ## Jupyter Notebooks
@@ -28,4 +29,5 @@ To run the notebooks locally check out the instructions for [running Jupyter not
 * Neural Network (Keras) : [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ml4economics/classification/master?filepath=tensorflow%2FNeuralNetwork.ipynb)
 
 ### Octave
+Here's one final example that shows how an implementation of logistic regression would look like in [GNU Octave](). Octave is the tool being used in Andrew Ng's highly popular [Machine Learning Course](https://www.coursera.org/learn/machine-learning)
 * Logistic Regression : [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ml4economics/classification/master?filepath=octave%2FLogisticRegression.ipynb)
