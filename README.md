@@ -11,7 +11,7 @@ The tools that were applied to the data are
 
 If you want to run the algorithms with Weka or KNIME, you will need a local installation of the software. For the other tools, several example implementations are available as [Jupyter Notebooks](https://jupyter.org/). 
 
-You can run the notebooks in your browser **without any installation** if you use the links below. They will access a Jupyter environment on the [![Binder](/binder.png)](https://mybinder.org) cloud service and you can access the notebooks through your browser. If this repository has changed recently, *mybinder.org* will have to rebuilt a Docker image for this environment which might take a while. Once the Docker image is available, the environment will be up in less than a minute.
+You can run the notebooks in your browser **without any installation** if you use the links below. They will access a Jupyter environment on the [![Binder](/binder.png)](https://mybinder.org) cloud service. If this repository has changed recently, *mybinder.org* will have to rebuild a Docker image for this environment which might take a while. Once the Docker image is available, the environment will be up in less than a minute.
 
 If you insist on running Jupyter locally, you'll need to install a few things. [Run Jupyter Notebooks locally](JupyterNotebooks.md) has more information on that.
 
