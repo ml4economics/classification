@@ -1,4 +1,4 @@
-# WEKA Models for Bank Dataset
+# Classification with Weka
 
 This folder contains classifications models for [Weka (Waikato Environment for Knowledge Analysis)](https://www.cs.waikato.ac.nz/ml/index.html) created for the [Bank Marketing Data Set from UCI](https://archive.ics.uci.edu/ml/datasets/bank+marketing).
 
