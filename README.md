@@ -9,7 +9,7 @@ The tools that were applied to the data are
 * [Python with scikit-learn](python)
 * [TensorFlow](tensorflow)
 
-If you want to run the algorithms with Weka or KNIME, you will need a local installation of the software. For the other tools, several example implementations are available as [Jupyter Notebooks](https://jupyter.org/). You **do not need any installation** if you use the links below. They will create a Jupyter environment on the [![Binder](/binder.svg)](https://mybinder.org) [Binder](https://mybinder.org) cloud service and you can access the notebooks through your browser. 
+If you want to run the algorithms with Weka or KNIME, you will need a local installation of the software. For the other tools, several example implementations are available as [Jupyter Notebooks](https://jupyter.org/). You **do not need any installation** if you use the links below. They will create a Jupyter environment on the [![Binder](/binder.png)](https://mybinder.org) [Binder](https://mybinder.org) cloud service and you can access the notebooks through your browser. 
 If you insist on running Jupyter locally, you'll need to install a few things. [Run Jupyter Notebooks locally](JupyterNotebooks.md) has more information on that.
 
 ## Example Notebooks
