@@ -8,6 +8,6 @@ To use these models
 * download and install the `KNIME Analytics Platform for Windows` from the [KNIME Download Site](https://www.knime.com/downloads/download-knime)
 * start KNIME and import a workflow (`File` -> `Import Workflow`, select `Root Directory`)
 * activate the workflow and execute it
-* to see the results of a workflow node, right click and select one of the results option. For instance, there's an *Accuracy Statistics* in the context menu of the *Score* node or and *Image* in the *ROC Curve* node.
+* to see the results of a workflow node, right click and select one of the results option. For instance, there's an *Accuracy Statistics* in the context menu of the *Score* node or an *Image* in the *ROC Curve* node.
 
 The workflows as stored here are not executed. That means the model will be built when you first execute the entire workflow.
