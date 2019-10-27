@@ -9,4 +9,5 @@ To apply these models on the bank dataset
 * start Weka and select `Workbench`
 * go to the `Preprocessing` view and load the data with `Open File`. The complete dataset is *bank-full.arff*. For LDA you should use *bank-full.dummy-encoded.arff*.
 * go to the `Classify` view and load a model (right-click in the `Result list` window)
+* activate the model : right click the load entry in the `Result list` and select `Re-apply this model's configuration`
 * set the `Test options` to `Use training set` and apply the model with `Start`. If you select `Percentage split`, the model will be recreated using 80% of the data and evaluated on the remaining 20%.
