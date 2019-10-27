@@ -3,7 +3,6 @@
 The repository demonstrates the application of different Machine Learning tools on a real world classification problem. The data being used the [Bank Marketing Data Set](https://archive.ics.uci.edu/ml/datasets/bank+marketing) from the [UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php).
 
 The tools that were applied to the data are
-* [Weka (Waikato Environment for Knowledge Analysis)](https://www.cs.waikato.ac.nz/ml/index.html)
 * [Weka](WEKA)
 * [KNIME](KNIME)
 * [R](https://github.com/ml4economics/notebooks-r)
