@@ -1,6 +1,6 @@
 # Implementations of Classification Algorithms
 
-The repository demonstrates the application of different Machine Learning tools on a real world classification problem. The data being used the [Bank Marketing Data Set](https://archive.ics.uci.edu/ml/datasets/bank+marketing) from the [UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php).
+This repository demonstrates the application of different Machine Learning tools on a real world classification problem. The data being used the [Bank Marketing Data Set](https://archive.ics.uci.edu/ml/datasets/bank+marketing) from the [UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php).
 
 The tools that were applied to the data are
 * [Weka](WEKA)
@@ -8,6 +8,10 @@ The tools that were applied to the data are
 * [R](R)
 * [Python with scikit-learn](python)
 * [TensorFlow](tensorflow)
+
+If you want to run the algorithms with Weka or KNIME, you will need a local installation of the software. For the other tools, several example implementations are available as [Jupyter Notebooks](https://jupyter.org/). You **do not need any installation** if you run the notebooks with the links below. The will a Jupyter environment on the [Binder](https://mybinder.org) cloud service.
+
+If you insist on running Jupyter locally, you'll need to install a few things. [Run Jupyter Notebooks locally](JupyterNotebooks.md) has more information on that.
 
 ## Jupyter Notebooks
 Example implementations for several algorithms are available as [Jupyter Notebooks](https://jupyter.org/) on [Binder](https://mybinder.org).
