@@ -1,5 +1,7 @@
 # Implementations of Classification Algorithms
 
+The repository demonstrates the application of different Machine Learning tools on a real world classification problem. The data being used the [Bank Marketing Data Set](https://archive.ics.uci.edu/ml/datasets/bank+marketing) from the [UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php).
+
 Here are the tools being used
 * [KNIME](KNIME)
 * [Weka (Waikato Environment for Knowledge Analysis)](https://www.cs.waikato.ac.nz/ml/index.html)
