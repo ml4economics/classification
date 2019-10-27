@@ -28,5 +28,5 @@ To run the notebooks locally check out the instructions for [running Jupyter not
 * Neural Network (Keras) : [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ml4economics/classification/master?filepath=tensorflow%2FNeuralNetwork.ipynb)
 
 ### GNU Octave
-Here's one final example that shows how an implementation of logistic regression would look like in [GNU Octave](https://www.gnu.org/software/octave/). Octave is the tool being used in Andrew Ng's highly popular [Machine Learning Course](https://www.coursera.org/learn/machine-learning)
+Here's one final example that shows how an implementation of logistic regression would look like in [GNU Octave](https://www.gnu.org/software/octave/). Octave is the tool being used highly popular [Stanford Machine Learning Course](https://www.coursera.org/learn/machine-learning)
 * Logistic Regression : [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ml4economics/classification/master?filepath=octave%2FLogisticRegression.ipynb)
