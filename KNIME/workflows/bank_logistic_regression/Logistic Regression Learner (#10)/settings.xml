@@ -69,7 +69,7 @@
 <entry key="stepSize" type="xdouble" value="0.1"/>
 <entry key="priorVariance" type="xdouble" value="0.1"/>
 <entry key="inMemory" type="xboolean" value="true"/>
-<entry key="seed" type="xstring" isnull="true" value=""/>
+<entry key="seed" type="xstring" value="8432103721626316552"/>
 <entry key="chunkSize" type="xint" value="10000"/>
 <entry key="calcCoefficientStatistics" type="xboolean" value="true"/>
 </config>
