@@ -11,3 +11,7 @@ To use these models
 * to see the results of a workflow node, right click and select one of the results option. For instance, there's an *Accuracy Statistics* in the context menu of the *Score* node or an *Image* in the *ROC Curve* node.
 
 The workflows as stored here are not executed. That means the model will be built when you first execute the entire workflow.
+
+## KNIME and Jupyter Notebooks
+
+You can also embed KNIME workflows in Jupyter notebooks. Check out https://www.knime.com/blog/knime-and-jupyter.
