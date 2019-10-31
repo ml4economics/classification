@@ -14,4 +14,4 @@ The workflows as stored here are not executed. That means the model will be buil
 
 ## KNIME and Jupyter Notebooks
 
-You can also embed KNIME workflows in Jupyter notebooks. Check out https://www.knime.com/blog/knime-and-jupyter.
+You can also embed KNIME workflows in Jupyter notebooks. Check out the [jupyter folder](jupyter).
