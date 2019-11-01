@@ -3,7 +3,9 @@ library(tidyverse)
 library(gmodels)
 library(ggmosaic)
 
-
+#------------------------------------------
+#      graphics settings
+#------------------------------------------
 ## default theme for ggplot
 theme_set(theme_bw())
 
@@ -14,17 +16,21 @@ mosaic_theme = theme(axis.text.x = element_text(angle = 90,
                      axis.text.y = element_blank(),
                      axis.ticks.y = element_blank())
 
+#------------------------------------------
+#         load data
+#------------------------------------------
 data_dir <- "../../data/bank-full.csv"
 bank_data <- read.csv(data_dir)
 
+#------------------------------------------
+#        textual data exploration
+#------------------------------------------
 sprintf("# rows: %d - # columns: %d", nrow(bank_data), ncol(bank_data))
 summary(bank_data)
 
 head(bank_data,10)
 
 CrossTable(bank_data$y) # from gmodels
-
-hist(bank_data$age)
 
 # This is a very condensed notation. Let's dissect it:
 # 1. '. == unknown' is an expression (i.e. lambda) applied to a data frame column.
@@ -43,6 +49,11 @@ bank_data %>%
   summarise_all(list(~sum(. == "unknown"))) %>%
   gather(key = "variable", value = "nr_unknown") %>% 
   arrange(-nr_unknown)
+
+#------------------------------------------
+#        graphical data exploration
+#------------------------------------------
+hist(bank_data$age)
 
 # show histograms for the 'age' feature for the different values of the 'y' column
 bank_data %>% 
