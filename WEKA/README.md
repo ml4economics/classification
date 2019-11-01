@@ -1,6 +1,6 @@
 # Classification with Weka
 
-This folder contains classifications models for [Weka (Waikato Environment for Knowledge Analysis)](https://www.cs.waikato.ac.nz/ml/index.html) created for the [Bank Marketing Data Set from UCI](https://archive.ics.uci.edu/ml/datasets/bank+marketing).
+This folder contains classification models for [Weka (Waikato Environment for Knowledge Analysis)](https://www.cs.waikato.ac.nz/ml/index.html) created for the [Bank Marketing Data Set from UCI](https://archive.ics.uci.edu/ml/datasets/bank+marketing).
 
 Weka is an easy-to-use tool for Machine Learning. To get started on Weka, I recommend to join the free [Data Mining with Weka Online Course](https://www.futurelearn.com/courses/data-mining-with-weka). It's quite compact and easy to follow.
 
