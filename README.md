@@ -17,12 +17,13 @@ If you insist on running Jupyter locally, you'll need to install a few things. [
 
 ## Example Notebooks
 
+### R
+* Data Exploration : [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ml4economics/classification/master?filepath=R%2FDataExploration.ipynb)
+* Logistic Regression : [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ml4economics/classification/master?filepath=R%2FLogisticRegression.ipynb)
+
 ### Python (Scikit-Learn)
 * Data Exploration : [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ml4economics/classification/master?filepath=python%2FDataExploration.ipynb)
 * Logistic Regression : [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ml4economics/classification/master?filepath=python%2FLogisticRegression.ipynb)
-
-### R
-* Logistic Regression : [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ml4economics/classification/master?filepath=R%2FLogisticRegression.ipynb)
 
 ### Tensorflow
 * Logistic Regression TF : [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ml4economics/classification/master?filepath=tensorflow%2FLogisticRegression.ipynb)
