@@ -1,7 +1,8 @@
+# tidyverse includes dplyr, tidyr, readr, ggplot2
+library(tidyverse)
 library(gmodels)
 library(ggmosaic)
-library(dplyr)
-library(tidyverse)
+
 
 ## default theme for ggplot
 theme_set(theme_bw())
@@ -62,3 +63,4 @@ bank_data %>%
   mosaic_theme +
   xlab("Job") +
   ylab(NULL)
+
