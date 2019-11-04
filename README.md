@@ -13,6 +13,12 @@ If you want to run the algorithms with Weka or KNIME, you will need a local inst
 
 You can run the notebooks in your browser **without any installation** if you use the links below. They will access a Jupyter environment on the [![Binder](/binder.png)](https://mybinder.org) cloud service. If this repository has changed recently, *mybinder.org* will have to rebuild a Docker image for this environment which might take a while. Once the Docker image is available, the environment will be up in less than a minute.
 
+This repository use the following [Binder Configuration Files](https://mybinder.readthedocs.io/en/latest/config_files.html)
+1 environment.yml : the Conda environment for the notebooks
+2 runtime.txt : define the R runtime version
+3 install.R : specifies the required R packages
+4 apt.txt : specifies Linux packages for Octave (see also https://github.com/binder-examples/octave)
+
 If you insist on running Jupyter locally, you'll need to install a few things. [Run Jupyter Notebooks locally](JupyterNotebooks.md) has more information on that.
 
 ## Example Notebooks
