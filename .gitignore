@@ -1,6 +1,10 @@
-**/.ipynb_checkpoints
-**/__pycache__
-**/.spyproject
+# Jupyter
+.ipynb_checkpoints
+# Spyder files
+__pycache__
+.spyproject
+# RStudio files
 .Rproj.user
-**/rstudio.Rproj
-**/.Rhistory
+rstudio.Rproj
+.Rhistory
+.Rdata

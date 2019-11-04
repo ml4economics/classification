@@ -1,6 +1,6 @@
 # tidyverse includes dplyr, tidyr, readr, ggplot2
 library(tidyverse)
-library(caret)
+library(caret, quietly = TRUE)
 library(ROCR)
 
 options(warn=-1)
