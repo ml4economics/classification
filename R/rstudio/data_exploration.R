@@ -2,6 +2,7 @@
 library(tidyverse)
 library(gmodels)
 library(ggmosaic)
+library(corrplot)
 
 #------------------------------------------
 #      graphics settings
@@ -53,6 +54,20 @@ bank_data %>%
 #------------------------------------------
 #        graphical data exploration
 #------------------------------------------
+
+# correlation of socia economic factors
+bank_data %>% 
+  select(emp.var.rate, cons.price.idx, cons.conf.idx, euribor3m, nr.employed) %>% 
+  cor() %>% 
+  corrplot(method = "number",
+           type = "upper",
+           tl.cex = 0.8,
+           tl.srt = 45,
+           tl.col = "black")
+
+#------------------------------------------
+#       bank data
+#------------------------------------------
 hist(bank_data$age)
 
 # show histograms for the 'age' feature for the different values of the 'y' column
@@ -75,3 +90,13 @@ bank_data %>%
   xlab("Job") +
   ylab(NULL)
 
+# build table of monthly proportions
+month_table <- table(bank_data$month, bank_data$y)
+month_tab <- as.data.frame(prop.table(month_table, 2))
+colnames(month_tab) <-  c("month", "y", "perc")
+
+# plot the table
+ggplot(data = month_tab, aes(x = month, y = perc, fill = y)) + 
+  geom_bar(stat = 'identity', position = 'dodge', alpha = 2/3) + 
+  xlab("Month")+
+  ylab("Percent")
