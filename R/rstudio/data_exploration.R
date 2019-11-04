@@ -3,6 +3,7 @@ library(tidyverse)
 library(gmodels)
 library(ggmosaic)
 library(corrplot)
+library(caret)
 
 #------------------------------------------
 #      graphics settings
