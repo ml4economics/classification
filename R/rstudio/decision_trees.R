@@ -4,15 +4,38 @@ library(rpart)
 library(rpart.plot)
 library(caret)
 library(ROCR)
-library(randomForest)
+library(Metrics)
 
 options(warn=-1)
+
+data_dir_default = "../../data/"
+data_sets = c("bank-full", "bank-10percent", "bank-balanced")
+
+read_data <- function(data_set, data_dir = data_dir_default) {
+  data_set <- paste(data_dir, data_set, ".csv", sep='')
+  read.csv(data_set)
+}
+
+partition_data <- function(data, prop = 0.8) {
+
+  set.seed(4711)
+  n <- nrow(data)
+  n_train <- round(0.8 * n) 
+  partition <- sample(1:n, n_train)
+  
+  first <-  data[partition,]
+  second  <-  data[-partition,]
+  
+  list(first, second)
+}
 
 #------------------------------------------
 #         load data
 #------------------------------------------
-data_dir <- "../../data/bank-full.csv"
-bank_data <- read.csv(data_dir)
+bank_data <- read_data(data_sets[1])
+partitions <- partition_data(bank_data)
+train.df <- partitions[[1]]
+test.df  <- partitions[[2]]
 
 #------------------------------------------
 #        textual data exploration
@@ -23,14 +46,9 @@ summary(bank_data)
 #------------------------------------------
 #        partition data
 #------------------------------------------
-set.seed(4711)
-n <- nrow(bank_data)
-n_train <- round(0.8 * n) 
-
-train_indices <- sample(1:n, n_train)
-
-train.df <-  bank_data[train_indices,]
-test.df  <-  bank_data[-train_indices,]
+partitions <- partition_data(bank_data)
+train.df <- partitions[[1]]
+test.df  <- partitions[[2]]
 
 dim(train.df)
 dim(test.df)
