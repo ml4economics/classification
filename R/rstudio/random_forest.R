@@ -1,10 +1,8 @@
 # tidyverse includes dplyr, tidyr, readr, ggplot2
 library(tidyverse)
-library(rpart)
-library(rpart.plot)
 library(caret)
 library(ROCR)
-library(Metrics)
+library(randomForest)
 
 options(warn=-1)
 
@@ -17,7 +15,7 @@ read_data <- function(data_set, data_dir = data_dir_default) {
 }
 
 partition_data <- function(data, prop = 0.8) {
-
+  
   set.seed(4711)
   n <- nrow(data)
   n_train <- round(0.8 * n) 
@@ -56,24 +54,25 @@ dim(test.df)
 #------------------------------------------
 #        model
 #------------------------------------------
-cp <- 0.002
-bank_model <- rpart(formula = y ~ ., 
-                    data = train.df, 
-                    method = "class",
-                    control = rpart.control(minsplit = 2, cp = cp))
+model <- randomForest(y ~ ., 
+                      data = train.df,
+                      ntree = 100)
 
-print(bank_model)
-
-rpart.plot(bank_model, type=2)
+layout(matrix(c(1,2),nrow=1), width=c(4,1)) 
+par(mar=c(5,4,4,0)) #No margin on the right side
+plot(model, log="y")
+par(mar=c(5,0,4,2)) #No margin on the left side
+plot(c(0,1),type="n", axes=F, xlab="", ylab="")
+legend("top", colnames(model$err.rate),col=1:4,cex=0.8,fill=1:4)
 
 #------------------------------------------
 #          evaluation
 #------------------------------------------
-predict.class =  predict(object = bank_model,  
+predict.class =  predict(object = model,  
                          newdata = test.df,
-                         type = "class")  
+                         type = "response")  
 
-predict.probs = predict(object = bank_model,  
+predict.probs = predict(object = model,  
                         newdata = test.df,   
                         type = "prob")
 predict.probs.yes <- predict.probs[,"yes"]
@@ -85,9 +84,6 @@ accuracy <- evaluation$overall["Accuracy"]
 
 cat("Accuracy : ", accuracy, "\n")
 
-ce(actual = test.df$y, 
-   predicted = predict.class)
-
 
 pred <- prediction(predict.probs.yes, test.df$y)
 roc_perf <- performance(pred,"tpr","fpr")
@@ -96,3 +92,4 @@ plot(roc_perf, colorize=TRUE)
 auc_perf <- performance(pred,"auc")
 auc <- auc_perf@y.values[[1]]
 cat("AUC :", auc)
+
