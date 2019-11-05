@@ -56,7 +56,7 @@ with(test.df, table(y, pred.log))
 # classification accuracy
 with(test.df, mean(y == pred.log))
 
-pred <- prediction( probs, test.df$y)
+pred <- prediction(probs, test.df$y)
 roc_perf <- performance(pred,"tpr","fpr")
 plot(roc_perf, colorize=TRUE)
 
