@@ -56,7 +56,7 @@ dim(test.df)
 #------------------------------------------
 #        model
 #------------------------------------------
-cp <- 0.002
+cp <- 0.01
 bank_model <- rpart(formula = y ~ ., 
                     data = train.df, 
                     method = "class",
@@ -64,7 +64,7 @@ bank_model <- rpart(formula = y ~ .,
 
 print(bank_model)
 
-rpart.plot(bank_model, type=2)
+rpart.plot(bank_model, type=5, extra = 0)
 
 #------------------------------------------
 #          evaluation
