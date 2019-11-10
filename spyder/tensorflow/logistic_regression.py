@@ -24,7 +24,7 @@ from sklearn.metrics import confusion_matrix
 # ============================
 data_sets = ('bank-10percent', 'bank-full', 'bank-balanced')
 
-bank = pd.read_csv('../data/' + data_sets[1] + '.csv')
+bank = pd.read_csv('../../data/' + data_sets[1] + '.csv')
 
 label_col = 'y'
 label = bank[label_col]
@@ -89,10 +89,10 @@ with tf.Session() as sess:
     # Training cycle
     for epoch in range(training_epochs):
         # Run optimization op (backprop) and cost op (to get loss value)
-        _, c = sess.run([optimizer, cost], feed_dict={x: X_train, y: y_train})
+        _, c, acc = sess.run([optimizer, cost, accuracy], feed_dict={x: X_train, y: y_train})
         # Display logs per epoch step
         if (epoch+1) % display_step == 0:
-            print("Epoch:", '%04d' % (epoch+1), "cost=", "{:.9f}".format(c))
+            print("Epoch:", '%04d' % (epoch+1), "cost=", "{:.9f}".format(c), "Accuracy: {0:.2f} %".format(acc*100))
 
     print("Optimization Finished!")
 
@@ -104,4 +104,4 @@ with tf.Session() as sess:
     print("Confusion Matrix :")   
     print(confusion_matrix(tc, pc))
     
-    print("Accuracy: {0:.4f} %".format(acc*100))
+    print("Accuracy: {0:.2f} %".format(acc*100))

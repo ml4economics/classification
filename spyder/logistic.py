@@ -9,7 +9,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import confusion_matrix, accuracy_score
+from sklearn.metrics import confusion_matrix, accuracy_score, roc_auc_score
 
 import warnings
 warnings.filterwarnings('ignore')
@@ -43,6 +43,7 @@ for i in range(0,keys.size):
 """ 
 
 logpred = logmodel.predict(X_test)
+logpred_proba = logmodel.predict_proba(X_test)
 
 logtrainpred = logmodel.predict(X_train)
 
@@ -51,3 +52,4 @@ print(round(accuracy_score(y_train, logtrainpred),2)*100)
 print(confusion_matrix(y_test, logpred))
 print(round(accuracy_score(y_test, logpred),2)*100)
 
+print("AUC :", roc_auc_score(y_test, logpred_proba[:,1]))
