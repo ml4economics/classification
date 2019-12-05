@@ -5,14 +5,13 @@ Created on Wed Aug 21 13:38:05 2019
 @author: Karsten
 """
 
-import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import warnings
 warnings.filterwarnings('ignore')
 
-bank = pd.read_csv('../data/bank-10percent.csv', sep = ';')
+bank = pd.read_csv('../data/bank-10percent.csv')
 bank.info()
 
 df = bank
