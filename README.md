@@ -43,3 +43,4 @@ This repository uses the following [Binder Configuration Files](https://mybinder
 2. runtime.txt : defines the R runtime version
 3. install.R : specifies the required R packages
 4. apt.txt : specifies Linux packages for Octave (see also https://github.com/binder-examples/octave)
+5. postBuild : activate Jupyter TOC extension
