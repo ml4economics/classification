@@ -4,6 +4,7 @@ channels:
 dependencies:
   - python=3.7
   - jupyterlab    # notebooks
+  - jupyter_contrib_nbextensions # for TOC
   - numpy         # scientific computing
   - pandas        # data structures
   - scikit-learn  # machine learning libs
