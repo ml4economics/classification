@@ -1,4 +1,4 @@
-% Generates polinomyal features of certain degree.
+% Generates polynomial features of certain degree.
 % This function is used to extend training set features with new features to get 
 % more complex form/shape if decision boundaries.
 function out = add_polynomial_features(X1, X2, degree)
