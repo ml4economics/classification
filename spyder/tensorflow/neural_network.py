@@ -18,6 +18,7 @@ from keras.layers import Dense
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import confusion_matrix
+from sklearn.metrics import roc_auc_score
 
 def evaluate_model(model, features, labels):
     _, accuracy = model.evaluate(features, labels)
@@ -27,6 +28,8 @@ def evaluate_model(model, features, labels):
     predictions = model.predict_classes(features)
     print("Confusion Matrix :")   
     print(confusion_matrix(labels, predictions))
+    auc = roc_auc_score(labels, predictions)
+    print("AUC : {0:.2f}".format(auc))
     
 def plot_history(history):
     # to handle metrics keys changes in Keras 2.3
@@ -74,7 +77,7 @@ def make_model(num_inputs, layers):
 # ============================
 data_sets = ('bank-10percent', 'bank-full', 'bank-balanced')
 
-bank = pd.read_csv('../../data/' + data_sets[1] + '.csv')
+bank = pd.read_csv('../../data/' + data_sets[2] + '.csv')
 
 label_col = 'y'
 label = bank[label_col]
@@ -93,7 +96,7 @@ feature_count=X_train.shape[1]
 # ========================
 #     parameters
 # ========================
-num_epochs=10
+num_epochs=50
 layers = [16, 8]
 
 # ========================

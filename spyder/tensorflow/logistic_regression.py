@@ -64,10 +64,13 @@ prob = tf.nn.softmax(tf.matmul(x, W) + b) # Softmax
 # Minimize error using cross entropy
 cost = tf.reduce_mean(-tf.reduce_sum(y*tf.log(prob), reduction_indices=1))
 
+# softmax returns a two-dimensional tensor with probabilities for each class
 pred_class = tf.argmax(prob, 1);
 true_class = tf.argmax(y, 1);
-     
+class1_prob = tf.gather(prob, 1, axis=1)
+
 _, accuracy = tf.metrics.accuracy(true_class, pred_class)
+_, area_under_curve = tf.metrics.auc(true_class, class1_prob)
     
 # Gradient Descent
 optimizer = tf.train.GradientDescentOptimizer(learning_rate).minimize(cost)
@@ -89,7 +92,7 @@ with tf.Session() as sess:
     # Training cycle
     for epoch in range(training_epochs):
         # Run optimization op (backprop) and cost op (to get loss value)
-        _, c, acc = sess.run([optimizer, cost, accuracy], feed_dict={x: X_train, y: y_train})
+        _, c, acc, p = sess.run([optimizer, cost, accuracy, prob], feed_dict={x: X_train, y: y_train})
         # Display logs per epoch step
         if (epoch+1) % display_step == 0:
             print("Epoch:", '%04d' % (epoch+1), "cost=", "{:.9f}".format(c), "Accuracy: {0:.2f} %".format(acc*100))
@@ -97,11 +100,12 @@ with tf.Session() as sess:
     print("Optimization Finished!")
 
     # Test model
-    pc, tc, acc = sess.run([pred_class, true_class, accuracy], 
-                            feed_dict={x: X_test, y: y_test})
+    pc, tc, acc, auc = sess.run([pred_class, true_class, accuracy, area_under_curve], 
+                                feed_dict={x: X_test, y: y_test})
     
     # Calculate accuracy
     print("Confusion Matrix :")   
     print(confusion_matrix(tc, pc))
     
     print("Accuracy: {0:.2f} %".format(acc*100))
+    print("AUC: {0:.2f} %".format(auc))
