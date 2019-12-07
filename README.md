@@ -28,9 +28,9 @@ If you insist on running Jupyter locally, you'll need to install a few things. [
 * Classification Algorithms : [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ml4economics/classification/master?filepath=python%2FClassificationWithPython.ipynb)
 
 ### Tensorflow
-* Logistic Regression TF : [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ml4economics/classification/master?filepath=tensorflow%2FLogisticRegression.ipynb)
-* Logistic Regression MNIST : [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ml4economics/classification/master?filepath=tensorflow%2FLogisticRegressionMNIST.ipynb)
-* Neural Network (Keras) : [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ml4economics/classification/master?filepath=tensorflow%2FNeuralNetwork.ipynb)
+* Logistic Regression with TensorFlow : [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ml4economics/classification/master?filepath=tensorflow%2FLogisticRegression.ipynb)
+* Classification by a Neural Network implemented with Keras : [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ml4economics/classification/master?filepath=tensorflow%2FNeuralNetwork.ipynb)
+* Logistic Regression on a standard benchmark, the MNIST dataset : [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ml4economics/classification/master?filepath=tensorflow%2FLogisticRegressionMNIST.ipynb)
 
 ### GNU Octave
 Here's one final example that shows how an implementation of logistic regression would look like in [GNU Octave](https://www.gnu.org/software/octave/). Octave is the tool being used in the highly popular [Stanford Machine Learning Course](https://www.coursera.org/learn/machine-learning)
