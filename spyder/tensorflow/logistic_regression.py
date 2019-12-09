@@ -19,6 +19,36 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import confusion_matrix
 
+def build_graph(feature_count, class_count):
+    graph = tf.Graph()
+    with graph.as_default():
+        # tf Graph Input
+        x = tf.placeholder(tf.float32, [None, feature_count]) 
+        y = tf.placeholder(tf.float32, [None, class_count]) 
+
+        # Set model weights
+        W = tf.Variable(tf.zeros([feature_count, class_count]))
+        b = tf.Variable(tf.zeros([class_count]))
+
+        # Construct model
+        prob = tf.nn.softmax(tf.matmul(x, W) + b) # Softmax
+
+        # Minimize error using cross entropy
+        cost = tf.reduce_mean(-tf.reduce_sum(y*tf.log(prob), reduction_indices=1))
+
+        # softmax returns a two-dimensional tensor with probabilities for each class
+        pred_class = tf.argmax(prob, 1);
+        true_class = tf.argmax(y, 1);
+        class1_prob = tf.gather(prob, 1, axis=1)
+
+        _, accuracy = tf.metrics.accuracy(true_class, pred_class)
+        _, area_under_curve = tf.metrics.auc(true_class, class1_prob)
+    
+        # Gradient Descent
+        optimizer = tf.train.GradientDescentOptimizer(learning_rate).minimize(cost)
+
+    return graph, x, y, optimizer, pred_class, true_class, cost, accuracy, area_under_curve
+
 # ============================
 #     Data Preprocessing
 # ============================
@@ -50,41 +80,19 @@ learning_rate = 0.1
 training_epochs = 100
 display_step = 5
 
-# tf Graph Input
-x = tf.placeholder(tf.float32, [None, feature_count]) 
-y = tf.placeholder(tf.float32, [None, class_count]) 
-
-# Set model weights
-W = tf.Variable(tf.zeros([feature_count, class_count]))
-b = tf.Variable(tf.zeros([class_count]))
-
-# Construct model
-prob = tf.nn.softmax(tf.matmul(x, W) + b) # Softmax
-
-# Minimize error using cross entropy
-cost = tf.reduce_mean(-tf.reduce_sum(y*tf.log(prob), reduction_indices=1))
-
-# softmax returns a two-dimensional tensor with probabilities for each class
-pred_class = tf.argmax(prob, 1);
-true_class = tf.argmax(y, 1);
-class1_prob = tf.gather(prob, 1, axis=1)
-
-_, accuracy = tf.metrics.accuracy(true_class, pred_class)
-_, area_under_curve = tf.metrics.auc(true_class, class1_prob)
-    
-# Gradient Descent
-optimizer = tf.train.GradientDescentOptimizer(learning_rate).minimize(cost)
-
+graph, x, y, optimizer, pred_class, true_class, cost, accuracy, area_under_curve = build_graph(feature_count, class_count)
+ 
 # Initialize the variables (i.e. assign their default value)
-init = [ 
-        tf.global_variables_initializer(), 
-        tf.local_variables_initializer()    # for metrics
-        ]
+with graph.as_default():
+     init = [ 
+             tf.global_variables_initializer(), 
+             tf.local_variables_initializer()    # for metrics
+             ]
 
 # ============================
 #       Start training
 # ============================
-with tf.Session() as sess:
+with tf.Session(graph=graph) as sess:
 
     # Run the initializer
     sess.run(init)
@@ -92,7 +100,7 @@ with tf.Session() as sess:
     # Training cycle
     for epoch in range(training_epochs):
         # Run optimization op (backprop) and cost op (to get loss value)
-        _, c, acc, p = sess.run([optimizer, cost, accuracy, prob], feed_dict={x: X_train, y: y_train})
+        _, c, acc = sess.run([optimizer, cost, accuracy], feed_dict={x: X_train, y: y_train})
         # Display logs per epoch step
         if (epoch+1) % display_step == 0:
             print("Epoch:", '%04d' % (epoch+1), "cost=", "{:.9f}".format(c), "Accuracy: {0:.2f} %".format(acc*100))
