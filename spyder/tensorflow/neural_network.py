@@ -28,10 +28,11 @@ def evaluate_model(model, features, labels):
     print('Accuracy: %.2f' % (accuracy*100))
 
     # make class predictions with the model
-    predictions = model.predict_classes(features)
+    predictions = model.predict_classes(features)   
     print("Confusion Matrix :")   
     print(confusion_matrix(labels, predictions))
-    auc = roc_auc_score(labels, predictions)
+    probabilities = model.predict(features)
+    auc = roc_auc_score(labels, probabilities)
     print("AUC : {0:.2f}".format(auc))
     
 def plot_history(history):
@@ -80,7 +81,7 @@ def make_model(num_inputs, layers):
 # ============================
 data_sets = ('bank-10percent', 'bank-full', 'bank-balanced')
 
-bank = pd.read_csv('../../data/' + data_sets[2] + '.csv')
+bank = pd.read_csv('../../data/' + data_sets[1] + '.csv')
 
 label_col = 'y'
 label = bank[label_col]
@@ -107,8 +108,9 @@ layers = [16, 8]
 # ========================
 model = make_model(feature_count, layers)
 print("# features : {0}".format(feature_count))
-plot_model(model, to_file='model_plot.png', show_shapes=True, show_layer_names=False)
+SVG(model_to_dot(model, show_shapes=True, show_layer_names=False).create(prog='dot', format='svg'))
 print(model.summary())
+
 # ========================
 #     train
 # ========================
