@@ -12,5 +12,6 @@ dependencies:
   - seaborn       # visualization based on matplotlib
   - tensorflow
   - keras
+  - pydot
   - octave_kernel
 

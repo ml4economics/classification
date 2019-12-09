@@ -19,6 +19,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import roc_auc_score
+from keras.utils.vis_utils import plot_model
+from IPython.display import SVG
+from keras.utils import model_to_dot
 
 def evaluate_model(model, features, labels):
     _, accuracy = model.evaluate(features, labels)
@@ -96,14 +99,16 @@ feature_count=X_train.shape[1]
 # ========================
 #     parameters
 # ========================
-num_epochs=50
+num_epochs=10
 layers = [16, 8]
 
 # ========================
 # define the keras model
 # ========================
 model = make_model(feature_count, layers)
-
+print("# features : {0}".format(feature_count))
+plot_model(model, to_file='model_plot.png', show_shapes=True, show_layer_names=False)
+print(model.summary())
 # ========================
 #     train
 # ========================
@@ -112,7 +117,7 @@ history = model.fit(X_train, y_train,
                     epochs=num_epochs,
                     validation_data=(X_test, y_test),
                     verbose=1)
-
+print(model.summary())
 # ========================
 #     plot
 # ========================

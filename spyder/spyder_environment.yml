@@ -13,4 +13,5 @@ dependencies:
   - keras
   - spyder
   - mlxtend
+  - pydot
 
