@@ -1,14 +1,16 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Sep 13 13:22:41 2019
-
-@author: Karsten
-"""
-
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.svm import SVC
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.naive_bayes import GaussianNB
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.dummy import DummyClassifier
 from sklearn.metrics import confusion_matrix, accuracy_score, roc_auc_score
 
 import warnings
@@ -31,25 +33,62 @@ sc_X = StandardScaler()
 X_train = sc_X.fit_transform(X_train)
 X_test = sc_X.transform(X_test)
 
+def quality(model, features, labels):
+    predictions = model.predict(features)
+    probabilities = model.predict_proba(features)
+    conf_matrix = confusion_matrix(labels, predictions)   
+    accuracy = accuracy_score(labels, predictions)  
+    auc = roc_auc_score(labels, probabilities[:,1])
+    return conf_matrix, accuracy, auc
 
-logmodel = LogisticRegression() 
-logmodel.fit(X_train,y_train)
+def fit_and_evaluate(model, X_train,y_train, X_test, y_test, confusion_matrix = False):
+    model.fit(X_train,y_train)
+    conf_matrix, accuracy, auc = quality(model, X_test, y_test)
+    if confusion_matrix:
+        print("\nConfusion Matrix:\n{0}".format(conf_matrix))
+    print("Accuracy: {0:.2f} %".format(accuracy*100), "AUC: {0:.3f} %".format(auc))
 
-"""
-print("Coefficients :")
-keys = features_encoded.keys()
-for i in range(0,keys.size):
-    print("{} : {:.4f}".format(keys[i],logmodel.coef_[0][i]))
-""" 
+print("\n------ Zero Rule ------")
+dummy = DummyClassifier(strategy='most_frequent') 
+fit_and_evaluate(dummy, X_train, y_train, X_test, y_test)
 
-logpred = logmodel.predict(X_test)
-logpred_proba = logmodel.predict_proba(X_test)
+print("\n------ Logistic Regression ------")
+logistic = LogisticRegression() 
+fit_and_evaluate(logistic, X_train, y_train, X_test, y_test)
 
-logtrainpred = logmodel.predict(X_train)
+print("\n------ LDA ------")
+lda = LinearDiscriminantAnalysis() 
+fit_and_evaluate(lda, X_train, y_train, X_test, y_test)
 
-print(confusion_matrix(y_train, logtrainpred))
-print(round(accuracy_score(y_train, logtrainpred),2)*100)
-print(confusion_matrix(y_test, logpred))
-print(round(accuracy_score(y_test, logpred),2)*100)
+print("\n------ Gaussian Naive Bayes ------")
+gaussianNB = GaussianNB()
+fit_and_evaluate(gaussianNB, X_train, y_train, X_test, y_test)
 
-print("AUC :", roc_auc_score(y_test, logpred_proba[:,1]))
+
+print("\n------ KNN ------")
+knn = KNeighborsClassifier(n_neighbors=13)
+fit_and_evaluate(knn, X_train, y_train, X_test, y_test)
+
+print("\n------ Decision Tree (Gini) ------")
+dtree = DecisionTreeClassifier(criterion='gini')
+fit_and_evaluate(dtree, X_train, y_train, X_test, y_test)
+
+print("\n------ Decision Tree (Entropy) ------")
+dtree = DecisionTreeClassifier(criterion='entropy')
+fit_and_evaluate(dtree, X_train, y_train, X_test, y_test)
+
+print("\n------ Random Forest (Gini) ------")
+rfc = RandomForestClassifier(criterion='gini')
+fit_and_evaluate(rfc, X_train, y_train, X_test, y_test)
+
+print("\n------ Random Forest (Entropy) ------")
+rfc = RandomForestClassifier(criterion='gini')
+fit_and_evaluate(rfc, X_train, y_train, X_test, y_test)
+
+print("\n------ Gradient Boosting Classifier ------")
+boosting = GradientBoostingClassifier()
+fit_and_evaluate(boosting, X_train, y_train, X_test, y_test)
+
+print("\n------ SVM ------")
+svc = SVC(kernel = 'rbf', probability=True)
+fit_and_evaluate(svc, X_train, y_train, X_test, y_test)
