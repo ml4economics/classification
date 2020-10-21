@@ -38,7 +38,7 @@ Here's one final example that shows how an implementation of logistic regression
 
 ## Binder Configuration Files
 
-This repository uses the following [Binder Configuration Files](https://mybinder.readthedocs.io/en/latest/config_files.html)
+This repository uses the following [Binder Configuration Files](https://mybinder.readthedocs.io/en/latest/using/config_files.html)
 1. environment.yml : the Conda environment for the notebooks
 2. runtime.txt : defines the R runtime version
 3. install.R : specifies the required R packages
